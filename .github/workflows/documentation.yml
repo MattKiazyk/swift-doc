@@ -22,8 +22,8 @@ jobs:
           output: "html"
           format: "html"
       - name: Push Latest HTML Docs
-          uses: actions-x/commit@v1
-          with:
-            message: "Automated HTML Documentation updated"
-            files: html/
-            token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+        uses: actions-x/commit@v1
+        with:
+          message: "Automated HTML Documentation updated"
+          files: html/
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
