@@ -15,17 +15,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-       - name: Generate HTML Documentation
-         uses: SwiftDocOrg/swift-doc@master
-         with:
-           inputs: "Sources/SwiftDoc"
-           output: "Documentation"
-            format: "html"
-            
-
-        - name: Push Latest HTML Docs
+      - name: Generate HTML Documentation
+        uses: SwiftDocOrg/swift-doc@master
+        with:
+          inputs: "Sources/SwiftDoc"
+          output: "html"
+          format: "html"
+      - name: Push Latest HTML Docs
           uses: actions-x/commit@v1
           with:
             message: "Automated HTML Documentation updated"
-            files: Documentation/
+            files: html/
             token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
