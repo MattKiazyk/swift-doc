@@ -115,11 +115,11 @@ extension SwiftDoc {
           }
         }
 
-        // if case .html = format {
-        //   let cssData = try fetchRemoteCSS()
-        //   let cssURL = outputDirectoryURL.appendingPathComponent("all.css")
-        //   try writeFile(cssData, to: cssURL)
-        // }
+        if case .html = format {
+          let cssData = try fetchRemoteCSS()
+          let cssURL = outputDirectoryURL.appendingPathComponent("all.css")
+          try writeFile(cssData, to: cssURL)
+        }
 
       } catch {
         logger.error("\(error)")
