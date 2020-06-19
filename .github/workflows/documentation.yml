@@ -1,12 +1,6 @@
 name: Documentation
 
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - .github/workflows/documentation.yml
-      - Sources/SwiftDoc/**.swift
+on: push
 
 jobs:
   build:
